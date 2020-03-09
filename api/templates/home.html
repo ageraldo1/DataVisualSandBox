@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Sandbox</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bd-navbar fixed-top">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <span class="menu-icon-brand fa fa-flask"></span>
+                    <span class="navbar-brand mb-0 h2">Data Visualization Dashboard</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="javascript:refresh()">
+                      <span class="menu-icons fa fa-repeat"></span>Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#aboutModal">
+                        <span class="menu-icons fa fa-users"></span> About
+                    </a>
+                </li>
+    
+    
+            </ul>
+        </div>                 
+    </nav>
+
+    <hr style="padding-top: 50px">
+
+    <!-- Main Container -->
+
+    <div class="container-fluid" >
+
+        <!-- Tabitems -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="chartjs-tab" data-toggle="tab" href="#chartjs" role="tab" aria-controls="chart1" aria-selected="true">ChartJS</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="amchart-tab" data-toggle="tab" href="#amchart" role="tab" aria-controls="chart2" aria-selected="false">amCharts</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="apex-tab" data-toggle="tab" href="#apex" role="tab" aria-controls="chart3" aria-selected="false">ApexCharts</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="google-tab" data-toggle="tab" href="#google" role="tab" aria-controls="chart4" aria-selected="false">Google Charts</a>
+            </li>
+
+
+        </ul>
+        
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- ChartJS Tab Content -->
+            <div class="tab-pane fade show active" id="chartjs" role="tabpanel" aria-labelledby="chartjs-tab">
+                <!-- Line 1 -->
+                <div class="row" style="padding-top: 15px">
+                    <div class="col">
+                        <h6> Bar Graph</h6>
+                        <hr>
+                    </div>
+                    <div class="col">
+                        <h6>Horizontal Bar Chart</h6>
+                        <hr>
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container">
+                            <canvas id="view1_chartjs_plot"></canvas>
+                        </div> 
+                    </div>
+
+                    <div class="col">
+                        <div class="chart-container">
+                            <canvas id="view2_chartjs_plot"></canvas>
+                        </div> 
+                    </div>
+                </div>                                
+                
+
+                <!-- Line 2 -->
+                <div class="row">
+                    <div class="col">
+                        <h6> Line Graph</h6>
+                        <hr>
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container_lg">
+                            <canvas id="view3_chartjs_plot"></canvas>
+                        </div> 
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- amCharts Tab Content -->
+            <div class="tab-pane fade" id="amchart" role="tabpanel" aria-labelledby="amchart-tab">
+                <h1>amCharts Home</h1> 
+            </div>
+        </div>          
+    </div>  
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>    
+    
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    
+</body>
+</html>

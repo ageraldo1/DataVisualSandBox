@@ -10,6 +10,9 @@ flask-cors = "*"
 flask-restplus = "*"
 flask = "*"
 flask-restx = "*"
+flask-restful = "*"
+random-word = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
