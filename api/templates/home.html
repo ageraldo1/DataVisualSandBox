@@ -71,7 +71,7 @@
         <div class="tab-content" id="myTabContent">
             <!-- ChartJS Tab Content -->
             <div class="tab-pane fade show active" id="chartjs" role="tabpanel" aria-labelledby="chartjs-tab">
-                <!-- Line 1 -->
+                <!-- Line 1 Header -->
                 <div class="row" style="padding-top: 15px">
                     <div class="col">
                         <h6> Bar Graph</h6>
@@ -83,6 +83,7 @@
                     </div>
                 </div> 
 
+                <!-- Line 1 Content -->
                 <div class="row">
                     <div class="col">
                         <div class="chart-container">
@@ -96,41 +97,172 @@
                         </div> 
                     </div>
                 </div>                                
-                
 
-                <!-- Line 2 -->
+                <!-- Line 2 Header -->
                 <div class="row">
                     <div class="col">
                         <h6> Line Graph</h6>
                         <hr>
                     </div>
+
+                    <div class="col">
+                        <h6> Pie Graph</h6>
+                        <hr>
+                    </div>
                 </div> 
 
+                <!-- Line 2 Content -->
                 <div class="row">
                     <div class="col">
-                        <div class="chart-container_lg">
+                        <div class="chart-container">
                             <canvas id="view3_chartjs_plot"></canvas>
+                        </div> 
+                    </div>
+
+                    <div class="col">
+                        <div class="chart-container">
+                            <canvas id="view4_chartjs_plot"></canvas>
                         </div> 
                     </div>
                 </div>
 
+                <!-- Line 3 Header -->
+                <div class="row">
+                    <div class="col">
+                        <h6> Box Plot</h6>
+                        <hr>
+                    </div>
+                </div> 
 
+                <!-- Line 3 Content -->
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container_lg">
+                            <canvas id="view5_chartjs_plot"></canvas>
+                        </div> 
+                    </div>
+                </div>
 
             </div>
 
             <!-- amCharts Tab Content -->
             <div class="tab-pane fade" id="amchart" role="tabpanel" aria-labelledby="amchart-tab">
-                <h1>amCharts Home</h1> 
+
+                <!-- Line 1 Header -->
+                <div class="row"  style="padding-top: 15px">
+                    <div class="col">
+                        <h6> Sankey Diagram</h6>
+                        <hr>
+                    </div>
+
+                    <div class="col">
+                        <h6> Chord Diagram</h6>
+                        <hr>
+                    </div>
+                </div> 
+
+                <!-- Line 1 Content -->
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container" id="view6_chartjs_plot"></div> 
+                    </div>
+
+                    <div class="col">
+                        <div class="chart-container" id="view7_chartjs_plot"></div>
+                    </div>
+                </div>
+
+                <!-- Line 2 Header -->
+                <div class="row"  style="padding-top: 15px">
+                    <div class="col">
+                        <h6>WordCloud</h6>
+                        <hr>
+                    </div>
+
+                    <div class="col">
+                        <h6>Force Directed Tree</h6>
+                        <hr>
+                    </div>
+                </div> 
+
+                <!-- Line 2 Content -->
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container" id="view8_chartjs_plot"></div> 
+                    </div>
+
+                    <div class="col">
+                        <div class="chart-container" id="view9_chartjs_plot"></div>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- ApexCharts Tab Content -->
+            <div class="tab-pane fade" id="apex" role="tabpanel" aria-labelledby="apex-tab">
+                
+                <!-- Line 1 Header -->
+                <div class="row"  style="padding-top: 15px">
+                    <div class="col">
+                        <h6>Circular Gauge</h6>
+                        <hr>
+                    </div>
+                </div> 
+
+                <!-- Line 1 Content -->
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container_sm" id="view10_chartjs_plot"></div> 
+                    </div>
+
+                    <div class="col">
+                        <div class="chart-container_sm" id="view11_chartjs_plot"></div> 
+                    </div>
+
+                    <div class="col">
+                        <div class="chart-container_sm" id="view12_chartjs_plot"></div>   
+                    </div>
+                </div>
+
+                <!-- Line 2 Header -->
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <h6>HeatMap</h6>
+                        <hr>
+                    </div>
+                </div> 
+
+                <!-- Line 2 Content -->
+                <div class="row">
+                    <div class="col">
+                        <div class="chart-container_lg" id="view13_chartjs_plot"></div> 
+                    </div>
+                </div>
+
+            </div>
+          
         </div>          
     </div>  
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot@2.3.0/build/Chart.BoxPlot.min.js"></script>
+    
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <script src="//www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+    <script src="//www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     
     <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
     
 </body>
 </html>

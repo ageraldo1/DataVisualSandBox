@@ -37,7 +37,12 @@
 
 
 .chart-container_lg {
-    width: 1450px;
-    height:280px;
+    width: 80%;
+    height: 80px;
+}
 
+
+.chart-container_sm {
+  width: 55%;
+  height: 120px;
 }

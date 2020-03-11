@@ -1,11 +1,11 @@
 from flask_restful import Resource
-from random_word import RandomWords
+from nltk.corpus import words
 import random
+
 
 class RandomData(Resource):
     def get(self, type=None, size=6):
 
-        r = RandomWords()
         status = {}
 
         if type:
@@ -14,7 +14,7 @@ class RandomData(Resource):
             if type == 'bar':
 
                 result = {
-                    'label' : r.get_random_words(limit=size, hasDictionaryDef=True),
+                    'label' : random.sample(words.words(), size),
                     'data'  : [random.randint(0, 100) for i in range(size)]
                 }
 
@@ -25,7 +25,7 @@ class RandomData(Resource):
                     data.append([random.randint(0, 100) for i in range(size)])
 
                 result = {
-                    'label' : r.get_random_words(limit=size, hasDictionaryDef=True),
+                    'label' : random.sample(words.words(), size),
                     'data'  : data
                 }
             
